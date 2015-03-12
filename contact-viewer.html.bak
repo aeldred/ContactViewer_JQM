@@ -87,23 +87,23 @@
 			<div data-role="content">
 				<div>
 					<p style="display:inline">Name:</p>
-					<input type="text" />
+					<p class="contact-name" style="display:inline"></p>
 				</div>
 				<div>
 					<p style="display:inline">Title:</p>
-							<input type="text" />
+					<p class="contact-title" style="display:inline"></p>
 				</div>
 				<div>
 					<p style="display:inline">Email:</p>
-						<input type="text" />
+					<p class="contact-email" style="display:inline"></p>
 				</div>
 				<div>
 					<p style="display:inline">Phone</p>
-						<input type="text" />
+					<p class="contact-phone" style="display:inline"></p>
 				</div>
 				<div>
 					<p style="display:inline">Twitter ID:</p>
-							<input type="text" />
+					<p class="contact-twitterid" style="display:inline"></p>
 				</div>
 			</div>
 		</div>

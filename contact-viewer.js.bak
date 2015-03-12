@@ -46,20 +46,5 @@ $(document).on('pagebeforeshow','#details-page',function() {
 })
 
 $(document).on('pagebeforeshow','#new-page',function() {
-	$.get(
-    'http://contacts.tinyapollo.com/contacts?key='+_apiKey,
-      function(result) {
-        _contacts = {};
-        //console.log("there are "+ result.contacts.length + " contacts");
-          for (i in result.contacts) {
-              var contact = result.contacts[i];
-              _contacts[contact._id] = contact;
-              contactList.append('<li><a href="#details-page" ' +
-                'data-contact-id="' +
-                contact._id + '">' +
-                contact.name + '</a></li>')
-          }
-          contactList.listview('refresh');
-      }
-  )
+
 })
