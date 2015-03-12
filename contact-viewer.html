@@ -51,6 +51,9 @@
 				<a data-role="button" data-rel="back">
 					Back
 				</a>
+				<a data-role="button" data-icon="edit" href="#edit-page">
+					Edit
+				</a>
 				<h1>Contacts Details</h1>
 			</div>
 			<div data-role="content">
@@ -87,26 +90,62 @@
 			<div data-role="content">
 				<div>
 					<p style="display:inline">Name:</p>
-					<input type="text" />
+					<input id="new-name" type="text" />
 				</div>
 				<div>
 					<p style="display:inline">Title:</p>
-							<input type="text" />
+					<input id="new-title" type="text" />
 				</div>
 				<div>
 					<p style="display:inline">Email:</p>
-						<input type="text" />
+					<input id="new-email" type="text" />
 				</div>
 				<div>
 					<p style="display:inline">Phone</p>
-						<input type="text" />
+					<input id="new-phone" type="text" />
 				</div>
 				<div>
 					<p style="display:inline">Twitter ID:</p>
-							<input type="text" />
+					<input id="new-twitterId" type="text" />
 				</div>
+				<input type="button" id="new-button" value="Submit">
 			</div>
 		</div>
+
+
+		<div data-role="page" id="edit-page">
+			<div data-role="header">
+				<a data-role="button" data-rel="back">
+					Back
+				</a>
+				<h1>Edit Contact</h1>
+			</div>
+			<div data-role="content">
+				<div>
+					<p style="display:inline">Name:</p>
+					<input class="contact-name" type="text"  />
+				</div>
+				<div>
+					<p style="display:inline">Title:</p>
+					<input class="contact-title" type="text" />
+				</div>
+				<div>
+					<p style="display:inline">Email:</p>
+					<input class="contact-email" type="text" />
+				</div>
+				<div>
+					<p style="display:inline">Phone</p>
+					<input class="contact-phone" type="text" />
+				</div>
+				<div>
+					<p style="display:inline">Twitter ID:</p>
+					<input class="contact-twitterid" type="text" />
+				</div>
+				<input type="button" id="edit-button" value="Edit">
+			</div>
+		</div>
+
+
 
 	</body>
 </html>
