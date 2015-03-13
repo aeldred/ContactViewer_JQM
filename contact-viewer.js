@@ -47,36 +47,44 @@ $(document).on('pagebeforeshow','#details-page',function() {
 
 $(document).on('pagebeforeshow','#edit-page',function() {
   var contact = _contacts[_contactId]
-  $('.contact-name').val(contact.name)
-  $('.contact-title').val(contact.title)
-  $('.contact-email').val(contact.email)
-  $('.contact-phone').val(contact.phone)
-  $('.contact-twitterid').val(contact.twitterId)
+  $('#edit-name').val(contact.name)
+  $('#edit-title').val(contact.title)
+  $('#edit-email').val(contact.email)
+  $('#edit-phone').val(contact.phone)
+  $('#edit-twitterid').val(contact.twitterId)
 })
 
 $(document).on('click','#edit-button',function() {
-	var name=$('.contact-name').val()
-	var title=$('.contact-title').val()
-	var email=$('.contact-email').val()
-	var phone=$('.contact-phone').val()
-	var twitterId=$('.contact-twitterid').val()
+	var name= $('#edit-name').val()
+	var title= $('#edit-title').val()
+	var email= $('#edit-email').val()
+	var phone= $('#edit-phone').val()
+	var twitterId= $('#edit-twitterid').val()
 
-	$.put(
-     'http://contacts.tinyapollo.com/contacts/'+ +'?key='+_apiKey+
-		'&name='+name+
-		'&title='+title+
-		'&email='+email+
-		'&phone='+phone+
-		'&twitterId'+twitterId,
+	var	contact= {
+		email: email,
+		name: name,
+		phone: phone,
+		title: title,
+		twitterId: twitterId
+	}
 
-      function(result) {
-		  if(result.status=="error"){
-			alert("message: "+result.message+" contact: "+result.contact)	 
-		  }else{
-			alert("edit success!")
-		  }
-      }
-  )
+	$.ajax({
+		url:'http://contacts.tinyapollo.com/contacts/'+_contactId+'?key='+_apiKey,
+		data:contact,
+		type:"PUT",
+		//contentType: "application/json",
+		dataType: "json",
+		success: 
+			function(result) 
+				{
+					if(result.status=='success'){
+						alert('Edit success!')
+					}else if(result.status =='error'){
+						alert('Edit failed')	
+					}
+				}
+			})
 })
 
 $(document).on('click','#new-button',function() {

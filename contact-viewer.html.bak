@@ -123,29 +123,27 @@
 			<div data-role="content">
 				<div>
 					<p style="display:inline">Name:</p>
-					<input class="contact-name" type="text"  />
+					<input id="new-name" type="text"  />
 				</div>
 				<div>
 					<p style="display:inline">Title:</p>
-					<input class="contact-title" type="text" />
+					<input id="new-title" type="text" />
 				</div>
 				<div>
 					<p style="display:inline">Email:</p>
-					<input class="contact-email" type="text" />
+					<input id="new-email" type="text" />
 				</div>
 				<div>
 					<p style="display:inline">Phone</p>
-					<input id="edit-phone" type="text" />
+					<input id="new-phone" type="text" />
 				</div>
 				<div>
 					<p style="display:inline">Twitter ID:</p>
-					<input id="edit-twitterId" type="text" />
+					<input id="new-twitterid" type="text" />
 				</div>
 				<input type="button" id="edit-button" value="Edit">
 			</div>
 		</div>
-
-
 
 	</body>
 </html>
