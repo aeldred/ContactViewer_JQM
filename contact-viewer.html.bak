@@ -51,9 +51,13 @@
 				<a data-role="button" data-rel="back">
 					Back
 				</a>
+                 <a data-role="button" data-rel="Delete">
+                    Delete
+                </a>
 				<a data-role="button" data-icon="edit" href="#edit-page">
 					Edit
 				</a>
+               
 				<h1>Contacts Details</h1>
 			</div>
 			<div data-role="content">
@@ -108,7 +112,7 @@
 					<p style="display:inline">Twitter ID:</p>
 					<input id="new-twitterId" type="text" />
 				</div>
-				<input type="button" id="new-button" value="Submit">
+				<input type="button" id="new-button" value="Save">
 			</div>
 		</div>
 
@@ -141,7 +145,7 @@
 					<p style="display:inline">Twitter ID:</p>
 					<input id="new-twitterid" type="text" />
 				</div>
-				<input type="button" id="edit-button" value="Edit">
+				<input type="button" id="edit-button" value="Save">
 			</div>
 		</div>
 

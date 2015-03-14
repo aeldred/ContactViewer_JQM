@@ -47,14 +47,17 @@
 		</div>
 
 		<div data-role="page" id="details-page">
-			<div data-role="header">
+			<div data-role="header" data-type="horizontal">
 				<a data-role="button" data-rel="back">
 					Back
 				</a>
-				<a data-role="button" data-icon="edit" href="#edit-page">
-					Edit
-				</a>
-				<h1>Contacts Details</h1>
+                <h1>Contacts Details</h1>
+                <div data-type="horizontal" style="top:5px;position:absolute;float:right;z-index:5;display:inline;" align="right" class="ui-btn-right"> 
+                    <a data-role="button" data-icon="Edit" href="#edit-page">Edit</a>
+                    <input type="button" data-icon="delete" id="DeleteContact" value="submit">Delete</a> 
+		        </div>
+
+                
 			</div>
 			<div data-role="content">
 				<div>
@@ -77,6 +80,7 @@
 					<p style="display:inline">Twitter ID:</p>
 					<p class="contact-twitterid" style="display:inline"></p>
 				</div>
+                
 			</div>
 		</div>
 

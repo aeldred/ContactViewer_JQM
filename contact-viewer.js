@@ -111,3 +111,31 @@ $(document).on('click','#new-button',function() {
       }
   )
 })
+
+$(document).on('click',"#DeleteContact",function() {
+  console.log("INdelete")
+	var contact = _contacts[_contactId]
+    console.log(contact)
+	$.ajax({
+		url:'http://contacts.tinyapollo.com/contacts/'+_contactId+'?key='+_apiKey,
+		data:contact,
+		type:"Delete",
+		//contentType: "application/json",
+		dataType: "json",
+		success: 
+			function(result) 
+				{
+					if(result.status=='success'){
+                    console.log("s")
+						alert('Delete success!')
+					}else if(result.status =='error'){
+						console.log("f")
+                        alert('Delete failed')	
+                        
+					}
+				}
+			})
+            
+})
+
+
