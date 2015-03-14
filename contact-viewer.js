@@ -1,10 +1,10 @@
 var _apiKey='grumpy';
 var _contacts = {};
 var _contactId = null;
+ var contactList = null;
 
-console.log("Loading");
 $(document).on("pagebeforeshow","#home-page", function(){
-  var contactList = $('#contact-list');
+  contactList = $('#contact-list');
   contactList.html('');
 
   $.get(
@@ -113,9 +113,22 @@ $(document).on('click','#new-button',function() {
 })
 
 $(document).on('click',"#DeleteContact",function() {
-  console.log("INdelete")
-	var contact = _contacts[_contactId]
-    console.log(contact)
+        
+        Delete();           
+})
+
+$(document).on('click',"#DeleteInEdit",function() {
+        
+        Delete();
+	    
+           
+            
+})
+
+function Delete()
+{
+    var contact = _contacts[_contactId]
+   
 	$.ajax({
 		url:'http://contacts.tinyapollo.com/contacts/'+_contactId+'?key='+_apiKey,
 		data:contact,
@@ -126,8 +139,9 @@ $(document).on('click',"#DeleteContact",function() {
 			function(result) 
 				{
 					if(result.status=='success'){
-                    console.log("s")
+                    
 						alert('Delete success!')
+                       
 					}else if(result.status =='error'){
 						console.log("f")
                         alert('Delete failed')	
@@ -136,6 +150,7 @@ $(document).on('click',"#DeleteContact",function() {
 				}
 			})
             
-})
-
+            history.back()
+            document.replace()   
+}
 
