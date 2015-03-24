@@ -149,9 +149,6 @@ function Delete()
                         
 					}
 				}
-			})
-            
-            history.back()
-            document.replace()   
+			}) 
 }
 
