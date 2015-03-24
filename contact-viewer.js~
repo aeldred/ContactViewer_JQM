@@ -141,8 +141,10 @@ function Delete()
 			function(result) 
 				{
 					if(result.status=='success'){
+                    
 						alert('Delete success!')
 						$.mobile.changePage("#home-page", { transition: "slide", reverse: true });
+                       
 					}else if(result.status =='error'){
 						console.log("f")
                         alert('Delete failed')	
